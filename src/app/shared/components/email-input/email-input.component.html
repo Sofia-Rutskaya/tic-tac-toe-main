@@ -1,0 +1,19 @@
+<label class="form__item email-input" [ngClass]="{'red': isEmailInvalid && isEmailTouched}">
+  Email Address
+  <input
+    #emailInput
+    class="form__input email"
+    [ngClass]="{
+      'red-border' :  isEmailTouched && isEmailInvalid
+    }"
+    type="text"
+    placeholder="Enter your email"
+    (input)="changed(emailInput.value)"
+    (blur)="touched()"
+    [value]="email"
+    
+    [ngClass]="{
+      'red-border' :  isEmailTouched && isEmailInvalid
+    }"
+  />
+</label>
